@@ -1,0 +1,5 @@
+boxes: ./detections/boxes.json
+img: ./inputByte2image/byte2img.jpg
+log_detections_file: ./detections/detections.txt
+path: ./yolo
+savepath: ./detections
