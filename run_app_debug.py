@@ -11,7 +11,6 @@ from pathlib import Path
 import base64
 from rich.console import Console
 from pathlib import Path
-from SMWinservice import SMWinservice
 
 app = FastAPI()
 
@@ -255,7 +254,7 @@ class PythonCornerExample(SMWinservice):
 		
 if __name__ == '__main__':
     #PythonCornerExample.parse_command_line()
-	uvicorn.run("run_app_debug:app", host='127.100.100.1', port=8000, debug=True)
+	uvicorn.run("run_app_debug:app", host='127.100.100.1', port=8000, debug=True, limit_concurrency=4)
 
 
 
